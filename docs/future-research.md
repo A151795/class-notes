@@ -1,0 +1,7 @@
+# Future Research
+
+## These are items that will be useful to look into further after the class ends
+
+- Markdown
+- YAML
+- Command Prompt
