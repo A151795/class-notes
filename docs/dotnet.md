@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# .NET and Visual Studio
+# .NET
 
 ## Overview
 
