@@ -29,3 +29,34 @@ The idea of this would be a cross-platform tool for manageming web application b
 C# has one of these.  It is called the .NET Common Language Runtime, or the CLR.  Java also has one called the Java Virutal Machine, or the JVM.
 
 ## Visual Studio
+
+- We can check out the compiled machine code of a C# build by opening up the cmd and running `ildasm`. 
+- VS has snippets built into it.  Just type the shortcut and then hit tab twice.
+    - cw: Console.WriteLine
+    - if: IF Statement
+
+### Shortcuts
+- ctrl + .
+    - Brings up Intellisense    
+
+## C# Lanugage Features
+- `$`
+    - Used for string interpolation. 
+    - Example 
+        ```csharp
+        string name = "Max";
+        Console.WriteLine($"Hello, {name}!");
+        ```
+- `?`
+    - Used for values that may be null.
+    - Example
+        ```csharp
+        string? name = Console.ReadLine();
+        if (name != null) {
+            Console.WriteLine("Name is not null");
+        }
+        else {
+            Console.WriteLine("Name is null");
+        }
+        ```
+
