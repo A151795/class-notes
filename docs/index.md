@@ -1,3 +1,7 @@
-# My Class Notes
+---
+sidebar_position: 1
+---
 
-These will be the notes for my class.
+# Intro to Programming at Progressive Insurance
+
+This is where my class notes will live for the Intro to Programming class at Progressive Insurance.
