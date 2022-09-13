@@ -21,6 +21,10 @@ sidebar_position: 3
     - Brings up Intellisense
 - F12
     - Go to defination    
+    - ctrl + -
+        - Go back to where you were before you went to the definition
+- alt + F12
+    - Go to definition in a new window
 - ctrl + R ... A
     - Runs all tests
 - ctrl + R ... ctrl + A
