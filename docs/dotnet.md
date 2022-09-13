@@ -12,9 +12,9 @@ A platform for writing and runnnding software from Micrsoft.  .NET was relased i
 
 .NET provided an in the middle choice between VB and C++.  VB was a nice introduction to programming, but there a lot that cannot be done with the language.  On the other hand, C++ is very powerful so that anything can be done, but that said even the easy things are hard.
 
-### Origins of C#
+### Origins of C\#
 
-Microsoft wanted some sort of in-between of VB and C++.  C# was intended to be a language that could manage the tedious tasks such as memory management but that would still be robust and powerful enough to build anything.  The code name for this language was COOL (C-Based Object Oriented Language).  Microsoft also wanted to build a collection of example code to make getting started with C# easy.  This was called the Framework Class Library (FCL).
+Microsoft wanted some sort of in-between of VB and C++.  C\# was intended to be a language that could manage the tedious tasks such as memory management but that would still be robust and powerful enough to build anything.  The code name for this language was COOL (C-Based Object Oriented Language).  Microsoft also wanted to build a collection of example code to make getting started with C\# easy.  This was called the Framework Class Library (FCL).
 
 ### What is ASP.NET?
 
@@ -26,4 +26,4 @@ The idea of this would be a cross-platform tool for manageming web application b
 
 ### Managed Execution Environments
 
-C# has one of these.  It is called the .NET Common Language Runtime, or the CLR.  Java also has one called the Java Virutal Machine, or the JVM.
+C\# has one of these.  It is called the .NET Common Language Runtime, or the CLR.  Java also has one called the Java Virutal Machine, or the JVM.
