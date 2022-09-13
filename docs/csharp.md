@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# C# Language
+# C\# Language
 
 ## Basic Program
 ```csharp
@@ -22,26 +22,26 @@ The CTS defines two broad familties of types in .NET.
 - Have their membory managed automatically.
 - Life and scope is predictable.
 - The value lievs on the stack and is garbage collected when the variable goes out of scope.
-- Value types are structs in C#.
+- Value types are structs in C\#.
 
 ### Reference Types
 - Reference types have values that live on the managed heap.
 - The stack has a referece to the value on the heap.
 - The memory is allocated automatically and de-allocated using a garbage collector.
-- Reference types in C# are classes
+- Reference types in C\# are classes
 
 ## Primitive Types
 A list of all primitive types can be found [here](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types)
 
 ## Variable Rules
 - We can write out the specific type of the variable such as `int`.
-- We can also use the `var` keyword to have C# assume the type from the value
+- We can also use the `var` keyword to have C\# assume the type from the value
     ```csharp
     var a = "hello";
     var b = 2;
     var c = 3.2;
     ```
-- C# is strictly typed.  This means that we cannot change the the type of a var after it has been set.
+- C\# is strictly typed.  This means that we cannot change the the type of a var after it has been set.
     ```csharp
     var a = "hello";
     a = 2; // This does not work
