@@ -30,11 +30,12 @@ The CTS defines two broad familties of types in .NET.
 - The memory is allocated automatically and de-allocated using a garbage collector.
 - Reference types in C# are classes
 
-### Primitive Types
+## Primitive Types
 A list of all primitive types can be found [here](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types)
 
-### Variable Rules
-- We can use the `var` keyword to have C# assume the type from the value
+## Variable Rules
+- We can write out the specific type of the variable such as `int`.
+- We can also use the `var` keyword to have C# assume the type from the value
     ```csharp
     var a = "hello";
     var b = 2;
@@ -48,10 +49,56 @@ A list of all primitive types can be found [here](https://docs.microsoft.com/en-
 - `var` must be initialized everytime it is used
 - `var` can only be used as a local variable and cannot be used at the class level
 
-### Everything is an object (sort-of)
+
+## Classes
+- Private fields should be pre-fixed with a "_"
+- Example
+    ```csharp
+    public class BankAccount 
+    {
+        private decimal _currentBalance = 0;
+
+        public void Deposit(decimal amount) 
+        {
+            _currentBalance += amount;
+        }
+
+        public void Withdraw(decimal amount)
+        {
+            _currentBalance -= amount;
+        }
+
+        public decimal GetBalance()
+        {
+            return _currentBalance;
+        }
+
+    }
+    ```
+
+## Objects
 - All types inherit from type System.Object.
 - This means that we can pass anything as a parameter to a function if the paramter type is Object.
 - That said, if a parameter is of type object, we would have to cast it to use any of the special features of sub-classes.
+- Objects have two parts
+- State
+    - These are the variables that the object "owns"
+    - In .NET, the state is made up of class level variables called fields.
+- Behavior
+    - Code that can be invoked and that does something with the state
+    - In .NET, the behavior is made up of methods4w25
+
+## Simple Stack/Heap overview
+- Value types live on the stack.  The stack stores the name and a value for the variable.
+- Reference Types have their name on the stack with the value referencing a location on the heap which has the value we want.
+
+## Parametric Polymorphism
+- When defining certain datatypes, such as a list, we need to tell it what datatype will be in the list.
+- This allows us to pull items from the list and immediately do int operations on them.
+```csharp
+var intlist = new List<int>();
+intlist.Add(42);
+```
 
 ## Namespaces
 - Your default namespace is the name of the project
