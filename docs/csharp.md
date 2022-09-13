@@ -15,20 +15,29 @@ public class Program
 }
 ```
 
-## Common Type Systems (CTS)
-The CTS defines two broad familties of types in .NET.
+## Namespaces
+- Your default namespace is the name of the project
+- There can be multiple namespaces in the same file
+- We can use the `using` keyword to reference other namespaces.
+- We can do a filescope namespace which allows us to get rid of one level of curly brackets
+- Regular Namespace
+    ```csharp
+    namespace MyNamespace
+    {
+        public class MyClass
+        {
 
-### Value Types
-- Have their membory managed automatically.
-- Life and scope is predictable.
-- The value lievs on the stack and is garbage collected when the variable goes out of scope.
-- Value types are structs in C\#.
+        }
+    }
+    ```
+- Filescope Namespaces
+    ```csharp
+    namespace MyNamespace;
+    public class MyClass
+    {
 
-### Reference Types
-- Reference types have values that live on the managed heap.
-- The stack has a referece to the value on the heap.
-- The memory is allocated automatically and de-allocated using a garbage collector.
-- Reference types in C\# are classes
+    }
+    ```
 
 ## Primitive Types
 A list of all primitive types can be found [here](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types)
@@ -48,7 +57,6 @@ A list of all primitive types can be found [here](https://docs.microsoft.com/en-
     ```
 - `var` must be initialized everytime it is used
 - `var` can only be used as a local variable and cannot be used at the class level
-
 
 ## Classes
 - Private fields should be pre-fixed with a "_"
@@ -81,48 +89,21 @@ A list of all primitive types can be found [here](https://docs.microsoft.com/en-
 - This means that we can pass anything as a parameter to a function if the paramter type is Object.
 - That said, if a parameter is of type object, we would have to cast it to use any of the special features of sub-classes.
 - Objects have two parts
-- State
-    - These are the variables that the object "owns"
-    - In .NET, the state is made up of class level variables called fields.
-- Behavior
-    - Code that can be invoked and that does something with the state
-    - In .NET, the behavior is made up of methods4w25
-
-## Simple Stack/Heap overview
-- Value types live on the stack.  The stack stores the name and a value for the variable.
-- Reference Types have their name on the stack with the value referencing a location on the heap which has the value we want.
-
-## Parametric Polymorphism
+    - State
+        - These are the variables that the object "owns"
+        - In .NET, the state is made up of class level variables called fields.
+    - Behavior
+        - Code that can be invoked and that does something with the state
+        - In .NET, the behavior is made up of methods
+- Classes can be instansiated as objects.
+- Some classes have a parameterized type so that it knows how to deal with data.  This is called parametric polymorphism.  Many built in classes require this
+### Parametric Polymorphism
 - When defining certain datatypes, such as a list, we need to tell it what datatype will be in the list.
 - This allows us to pull items from the list and immediately do int operations on them.
 ```csharp
 var intlist = new List<int>();
 intlist.Add(42);
 ```
-
-## Namespaces
-- Your default namespace is the name of the project
-- There can be multiple namespaces in the same file
-- We can use the `using` keyword to reference other namespaces.
-- We can do a filescope namespace which allows us to get rid of one level of curly brackets
-- Regular Namespace
-    ```csharp
-    namespace MyNamespace
-    {
-        public class MyClass
-        {
-
-        }
-    }
-    ```
-- Filescope Namespaces
-    ```csharp
-    namespace MyNamespace;
-    public class MyClass
-    {
-
-    }
-    ```
 
 ## Naming Convention
 - PascalCase
@@ -164,3 +145,21 @@ intlist.Add(42);
         string cut2 = example[..5]; // cut2=hello
         ```
 
+## Common Type Systems (CTS)
+The CTS defines two broad familties of types in .NET.
+
+### Value Types
+- Have their membory managed automatically.
+- Life and scope is predictable.
+- The value lievs on the stack and is garbage collected when the variable goes out of scope.
+- Value types are structs in C\#.
+
+### Reference Types
+- Reference types have values that live on the managed heap.
+- The stack has a referece to the value on the heap.
+- The memory is allocated automatically and de-allocated using a garbage collector.
+- Reference types in C\# are classes
+
+### Quick Stack/Heap overview
+- Value types live on the stack.  The stack stores the name and a value for the variable.
+- Reference Types have their name on the stack with the value referencing a location on the heap which has the value we want.
