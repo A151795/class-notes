@@ -27,25 +27,3 @@ The idea of this would be a cross-platform tool for manageming web application b
 ### Managed Execution Environments
 
 C# has one of these.  It is called the .NET Common Language Runtime, or the CLR.  Java also has one called the Java Virutal Machine, or the JVM.
-
-## C# Lanugage Features
-- `$`
-    - Used for string interpolation. 
-    - Example 
-        ```csharp
-        string name = "Max";
-        Console.WriteLine($"Hello, {name}!");
-        ```
-- `?`
-    - Used for values that may be null.
-    - Example
-        ```csharp
-        string? name = Console.ReadLine();
-        if (name != null) {
-            Console.WriteLine("Name is not null");
-        }
-        else {
-            Console.WriteLine("Name is null");
-        }
-        ```
-
