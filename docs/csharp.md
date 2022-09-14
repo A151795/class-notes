@@ -62,33 +62,52 @@ A list of all primitive types can be found [here](https://docs.microsoft.com/en-
 - Private fields should be pre-fixed with a "_"
 - Example
     ```csharp
-    public class BankAccount 
+    public class Dog 
     {
-        private decimal _currentBalance = 0;
+        private string _name = string.Empty();
+        private string _type = string.Empty();
+        private string _age = string.Empty();
 
-        public BankAccount()
+        public Dog(string name, string type)
         {
-            // Construct the objects
+            _name = name;
+            _type = type;
         }
 
-        public void Deposit(decimal amount) 
+        public void myMethod() 
         {
-            _currentBalance += amount;
+
+        }
+    }
+    ```
+- Constructors can be overloaded and we can use other constructors to make less code for our overloaded constructors
+    ```csharp
+    public class Dog 
+    {
+        private string _name = string.Empty();
+        private string _type = string.Empty();
+        private string _age = string.Empty();
+
+        public Dog(string name, string type)
+        {
+            _name = name;
+            _type = type;
         }
 
-        public void Withdraw(decimal amount)
+        public Dog(string name, string type, string age): this(name, type)
         {
-            _currentBalance -= amount;
+            _age = age;
         }
 
-        public decimal GetBalance()
+        public void myMethod() 
         {
-            return _currentBalance;
-        }
 
+        }
     }
     ```
 ### Fields
+- Fields are just values on a class.
+- Many times they should be private and set with getters and setters.
 ### Properties
 - The purpose of properties is to expose fields.
 - Properties imply...
@@ -140,12 +159,22 @@ A list of all primitive types can be found [here](https://docs.microsoft.com/en-
     var myDog = new Dog { Name = "Harry" };
     myDog.Name = "Bill"; // This is not allowed because there is not setter and the property has already been initiated.
     ```
-- The required keyword can be added to properties.  This forces the client to set the property.
+- The required keyword can be added to properties.  This forces the client to set the property.  We can also just use an instructor to require the property.
     ```csharp
+
+    public class Dog
+    {
+        public Dog(string name)
+        {
+            Name = name;
+        }
+
+        public string Name { get; set; }
+    }
+
     public class Dog
     {
         public required string Name { get; set; }
-
     }
     ```
 - Properties can be set on the instantion of an object
