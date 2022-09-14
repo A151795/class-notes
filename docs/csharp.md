@@ -66,6 +66,11 @@ A list of all primitive types can be found [here](https://docs.microsoft.com/en-
     {
         private decimal _currentBalance = 0;
 
+        public BankAccount()
+        {
+            // Construct the objects
+        }
+
         public void Deposit(decimal amount) 
         {
             _currentBalance += amount;
@@ -83,6 +88,70 @@ A list of all primitive types can be found [here](https://docs.microsoft.com/en-
 
     }
     ```
+### Fields
+### Properties
+- The purpose of properties is to expose fields.
+- Properties imply...
+    - That there is no computation to be done
+    - That exceptions will not be thrown
+    - That once a property will set, it will not change unless the client changes it
+- We can use properties to make a private field look public (sort of)
+    ```csharp
+    public class Dog
+    {
+        private string _name = string.Empty;
+
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+    }
+    ```
+- We can also add scoping keywrods to the getters and setters.  The below code would say that anyone could read the value, but the value can only be set inside the correct class.
+    ```csharp
+    public class Dog
+    {
+        private string _name = string.Empty;
+
+        public string Name
+        {
+            get { return _name; }
+            private set { _name = value; }
+        }
+    }
+    ```
+- There is a short hand for the above code that generates a private field and a public property.  This is called an Auto Property
+    ```csharp
+    public class Dog
+    {
+        public string Name { get; set; }
+        public string Type { get; set; } = "Poodle"; // This sets a default value for _type.
+    }
+    ```
+- The init function can be used to only allow a value to be set on the instantiation of an object
+    ```csharp
+    public class Dog
+    {
+        public string Name { get; init; }
+    }
+    ```
+    ```csharp
+    var myDog = new Dog { Name = "Harry" };
+    myDog.Name = "Bill"; // This is not allowed because there is not setter and the property has already been initiated.
+    ```
+- The required keyword can be added to properties.  This forces the client to set the property.
+    ```csharp
+    public class Dog
+    {
+        public required string Name { get; set; }
+
+    }
+    ```
+- Properties can be set on the instantion of an object
+    ```csharp
+    var myDog = new Dog { Name = "Rover" };
+    ```
 
 ## Objects
 - All types inherit from type System.Object.
@@ -97,6 +166,7 @@ A list of all primitive types can be found [here](https://docs.microsoft.com/en-
         - In .NET, the behavior is made up of methods
 - Classes can be instansiated as objects.
 - Some classes have a parameterized type so that it knows how to deal with data.  This is called parametric polymorphism.  Many built in classes require this
+
 ### Parametric Polymorphism
 - When defining certain datatypes, such as a list, we need to tell it what datatype will be in the list.
 - This allows us to pull items from the list and immediately do int operations on them.
@@ -104,6 +174,14 @@ A list of all primitive types can be found [here](https://docs.microsoft.com/en-
 var intlist = new List<int>();
 intlist.Add(42);
 ```
+
+## Records
+- Records are reference types 
+- Records are different from classes because records use value based equality whereas classes use reference value equality
+- Simple Example
+    ```csharp
+    
+    ```
 
 ## Naming Convention
 - PascalCase

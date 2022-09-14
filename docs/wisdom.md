@@ -17,3 +17,8 @@ sidebar_position: 7
     - Don't spend a lot of time trying to import values from configuration files.
         - This adds a lot of complexity and vulnerabilities
     - Instead, just hard code values that are not intended to be changed and deal with it.
+    - Also, if you do have to change a value, it's fine because deploying software is super easy and fast now.
+- Just make classes public
+    - When doing application development, just make classes public.
+    - In systems or framework development, you should certainly tend towards private to protect classes.
+    - That said, in application development making classes public makes other app dev's job harder.
