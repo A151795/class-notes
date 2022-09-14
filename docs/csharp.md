@@ -105,6 +105,45 @@ A list of all primitive types can be found [here](https://docs.microsoft.com/en-
         }
     }
     ```
+    
+### Interfaces
+- Interface names shoudl always be in PascalCase and start with an upper case I
+- Sample interface
+    ```csharp
+    interface IPet
+    {
+        string Name();
+    }
+    ```
+- Implementing an Interface.  Class dog must "implement" all of the methods, fields, and properties of IPet
+    ```csharp
+    public class Dog : IPet
+    {
+        public string Name()
+        {
+            return "Rover";
+        }
+    }    
+    ```
+- Interfaces can be used as a sort of contract that forces classes to stick to a certain format
+- Interfaces are often used in place of functionality that will be coming later, so that test stubbing and tools like Moq can be used. 
+
+### Inheritance 
+- Extending a base class
+    ```csharp
+    public class Dog : [Base class to extend from]
+    {
+
+    }
+    ```
+#### Calling the base/super-class in a sub-class
+Just use the `base` keyword to call methods from the base/super-class.  The base keyword is a union of all of the methods from the entire class hierarchy.
+
+#### Overriding methods in inheritance
+- In order to override a method from the base class, the method in the base class must have the `virtual` keyword.
+- Then, in the sub-class, the overriding method must have the keyword `override`
+
+
 ### Fields
 - Fields are just values on a class.
 - Many times they should be private and set with getters and setters.
@@ -223,6 +262,8 @@ intlist.Add(42);
     - Prefix private and internal fields with an "_"
 - s_
     - Prefix static fields with "s_
+- I
+    - Interfaces should be prefixed with an upper case I
 
 ## Cool Lanugage Features
 - `$`
