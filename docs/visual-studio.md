@@ -11,27 +11,66 @@ sidebar_position: 3
     - if: IF Statement
 
 ## Shortcuts
-- F5
-    - Run project with debugger
-- ctrl + F5
-    - Runs project without debugger
-- F6 or shift + F6 or ctrl + shift + B
-    - Build project
-- ctrl + .
-    - Brings up Intellisense
-- F12
-    - Go to defination    
-    - ctrl + -
-        - Go back to where you were before you went to the definition
-- alt + F12
-    - Go to definition in a new window
-- ctrl + R ... A
-    - Runs all tests
-- ctrl + R ... ctrl + A
-    - Debug all tests    
-- ctrl + K + C
-    - Comments a block of code
-- ctrl + K + U
-    - Uncomments a block of code
-- ctrl + K ... ctrl + D
-    - Formats code per editor config
+- General Shortcuts
+    - shift + alt + enter
+        - Opens code window in full screen
+    - F5
+        - Run project with debugger
+    - ctrl + F5
+        - Runs project without debugger
+    - F6 or shift + F6 or ctrl + shift + B
+        - Build project
+    - ctrl + .
+        - Brings up Intellisense
+    - F12
+        - Go to defination    
+        - ctrl + -
+            - Go back to where you were before you went to the definition
+    - alt + F12
+        - Go to definition in a new window
+    - ctrl + ]
+        - Finds associated closing bracket
+    - ctrl + K ... ctrl + K
+        - Bookmarks a line of code.  This puts a little bookmark at the left of the line where breakpoints go.
+        - Bookmarks can be viewed in the bookmarks window.
+        - The bookmarks window can be viewed with View > Bookmarks Window or with ctrl + K ... ctrl + W
+- Opening Windows
+    - ctrl + alt + L
+        - Opens solution explorer
+    - ctrl + K ... ctrl + W
+        - Open the bookmarks window
+    - ctrl + E ... T
+        - Open the test explorer
+- Refactoring
+    - ctrl + R, ctrl + R
+        - Renames method, variable, etc.
+    - ctrl + K, ctrl + S
+        - Surround with an if, try, for, etc.
+    - alt + UP/DOWN
+        - Move selection up or down a line
+    - ctrl + K ... ctrl + C
+        - Comments a block of code
+    - ctrl + K ... ctrl + U
+        - Uncomments a block of code
+    - ctrl + K ... ctrl + D
+        - Formats code per editor config
+    - ctrl + K ... ctrl + F
+        - Formats selection per editor config
+- Debugging
+    - ctrl + shift + F5
+        - Stops the current debugging session, rebuilds the solution, and starts another debugging session.
+    - F9
+        - Toggle breakpoint
+    - F10
+        - Step Over
+    - F11
+        - Step Into
+    - UP + F11
+        - Step Out
+- Testing
+    - ctrl + R ... A
+        - Runs all tests
+    - ctrl + R ... ctrl + A
+        - Debug all tests  
+
+  
