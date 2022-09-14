@@ -12,6 +12,9 @@ sidebar_position: 3
 
 ## Shortcuts
 - General Shortcuts
+    - ctrl + .
+        - Brings up Intellisense
+        - This is a magical shortcut, and can help create methods, classes, etc.
     - shift + alt + enter
         - Opens code window in full screen
     - F5
@@ -20,8 +23,6 @@ sidebar_position: 3
         - Runs project without debugger
     - F6 or shift + F6 or ctrl + shift + B
         - Build project
-    - ctrl + .
-        - Brings up Intellisense
     - F12
         - Go to defination    
         - ctrl + -
