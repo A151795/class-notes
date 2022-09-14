@@ -16,4 +16,4 @@ sidebar_position: 7
 - Just hard code it
     - Don't spend a lot of time trying to import values from configuration files.
         - This adds a lot of complexity and vulnerabilities
-    - Instead just hard code values and deal with it.  In most cases, values don't change this much.
+    - Instead, just hard code values that are not intended to be changed and deal with it.
