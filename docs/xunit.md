@@ -37,8 +37,12 @@ public class UnitTest
     }
 }
 ```
+
+## Runnings Tests
 - [Fact]
     - Turns a function in a unit test class into a test.
     - As along as the function executes and completes without an exception, the test will pass.
 - [Theory]
     - Allows us to pass paramters into a test and then test the test with many parameter sets.
+- If we put a constructor in a test class, xUnit will re-run that constructor for every single Fact and Theory.
+    - This allows us to re-create a unique world for every test without code repition
