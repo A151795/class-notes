@@ -148,10 +148,11 @@ A list of all primitive types can be found [here](https://docs.microsoft.com/en-
         public string Type { get; set; } = "Poodle"; // This sets a default value for _type.
     }
     ```
-- The init function can be used to only allow a value to be set on the instantiation of an object
+- The init function can be used to only allow a value to be set on the instantiation of an object.  When using init, it's a good idea to get rid of the constructor so that the user must set it with the below method and not the constructor.
     ```csharp
     public class Dog
     {
+        private Dog() {} // This gets rid of the constructor 
         public string Name { get; init; }
     }
     ```
@@ -159,6 +160,7 @@ A list of all primitive types can be found [here](https://docs.microsoft.com/en-
     var myDog = new Dog { Name = "Harry" };
     myDog.Name = "Bill"; // This is not allowed because there is not setter and the property has already been initiated.
     ```
+    
 - The required keyword can be added to properties.  This forces the client to set the property.  We can also just use an instructor to require the property.
     ```csharp
 

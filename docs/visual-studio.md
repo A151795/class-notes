@@ -57,6 +57,9 @@ sidebar_position: 3
         - Formats code per editor config
     - ctrl + K ... ctrl + F
         - Formats selection per editor config
+    - ctrl + R ... ctrl + M
+        - Extracts a selection of code into a new method.
+        - Visual Studio will guess what parameters you will want in the method.
 - Debugging
     - ctrl + shift + F5
         - Stops the current debugging session, rebuilds the solution, and starts another debugging session.
