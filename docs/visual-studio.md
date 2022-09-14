@@ -29,7 +29,7 @@ sidebar_position: 3
     - alt + F12
         - Go to definition in a new window
     - ctrl + ]
-        - Finds associated closing bracket
+        - Finds associated closing bracket when the opening bracket is highlighed
     - ctrl + K ... ctrl + K
         - Bookmarks a line of code.  This puts a little bookmark at the left of the line where breakpoints go.
         - Bookmarks can be viewed in the bookmarks window.
