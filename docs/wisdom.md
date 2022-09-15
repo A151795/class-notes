@@ -1,8 +1,10 @@
 ---
-sidebar_position: 7
+sidebar_position: 998
 ---
 
 # Programmer Wisdom
+
+## General Wisdom
 - Write the code that you wish you had
     - When developing, code how you wish the object, api, etc. would work.
     - Then go implement the object, api, etc.
@@ -22,3 +24,13 @@ sidebar_position: 7
     - When doing application development, just make classes public.
     - In systems or framework development, you should certainly tend towards private to protect classes.
     - That said, in application development making classes public makes other app dev's job harder.
+
+## 4 Rules of Simple Design
+1. Passes the test
+    - The code does what it is supposed to do
+1. Reveals intention
+    - The code is legible
+    - A trained developer can look at the code and understand what it does
+    - Does the code show what is intended
+1. No duplication
+14. Fewest number of elements    
