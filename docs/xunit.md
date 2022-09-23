@@ -93,7 +93,27 @@ var myFruit2 = Fruit("Ignored String For Testing");
 var myFruit3 = Fruit(new Object());
 var myFruit4 = Fruit(string.Empty);
 ```
-### Stubbing
-A stub is used to ensure that a service or connection of services works as intended 
 ### Mocks
-Mocks are test doubles that record everything that happens to them.  You can ask them after the "when" portion of the test.
+A mock is a class that implements the same interface as the dependency of our SUT does.  If there is a dependency that is either unimplemented, reliant on dynamic data, etc, we need to create a mock so that our test has consistent outcomes.  Mocks essentially test the connection between various services, and also allow us to test edge cases easily.  Once the mock implements the save interface, we can specify what values it should return or exceptions it should throw instead of the normal service behvaior.  The use case of mocks is to figure out whether or not certain functions were run or not.
+```csharp
+interface IDoStuff(){
+    public void DoSomething();
+    public void DoThings();
+}
+
+class SUT{
+    public SUT(IDoStuff iDoStuff){
+        // Construct
+    }
+
+    public void TheThing(){
+        // The Thing
+    }
+}
+
+var mock = new Mock<IDoStuff>();
+mock.Setup(c => c.DoSomething()).Returns(32)
+```
+### Stubbing
+Stubs are just like mocks in that they implement the same interface as the services do.
+

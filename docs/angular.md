@@ -62,4 +62,6 @@ The div will have class bough if item.purchased is true.  The curly brackets is 
 - The `routerLink` property can be added to anchor tags so that when they are clicked, the components will be shown.
 - The `routerLinkActive` property can be used to add classes to the anchor when the anchor is currently selected.
 
-    
+## Service Workers
+- In general, service workers create a seperate box on the browser where javascript runs. They are oftentimes used for notifications.
+- In our case, we will use a mock service worker framework (MSW) that will intercept our HTTP request
